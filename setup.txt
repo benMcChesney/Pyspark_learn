@@ -24,3 +24,5 @@ setx JAVA_HOME "C:\Zulu\zulu-21"
 %JAVA_HOME%\bin
 
 setx PYSPARK_PYTHON "python"
+
+pip install delta-spark
