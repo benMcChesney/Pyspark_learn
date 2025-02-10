@@ -1,0 +1,26 @@
+
+# https://phoenixnap.com/kb/install-spark-on-windows-10?utm_source=pocket_shared
+winget install --id Azul.Zulu.21.JDK -e --source winget 
+winget install --id Python.Python.3.9 -e --source winget
+
+cd \ 
+ mkdir C:\hadoop\bin
+ mkdir C:\spark
+
+# spark-3.5.4-bin-hadoop3
+# prebuilt for hadoop 3.3
+
+curl --ssl-no-revoke -L -o C:\hadoop\bin\winutils.exe https://github.com/cdarlint/winutils/raw/master/hadoop-3.3.6/bin/winutils.exe
+
+
+setx SPARK_HOME "C:\Spark\spark-3.5.4-bin-hadoop3"
+setx HADOOP_HOME "C:\hadoop"
+setx JAVA_HOME "C:\Zulu\zulu-21"
+
+# ADD TO PATH : 
+
+%SPARK_HOME%\bin
+%HADOOP_HOME%\bin
+%JAVA_HOME%\bin
+
+setx PYSPARK_PYTHON "python"

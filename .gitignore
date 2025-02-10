@@ -169,3 +169,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+data/flights/.part-00000-c6206ed8-69f0-4bbc-b8d4-ddb104cf40a2-c000.snappy.parquet.crc
+/data
